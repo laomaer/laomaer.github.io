@@ -333,7 +333,7 @@
     100%{box-shadow:0 0 0 0 rgba(255,142,174,0)}
   }
   #elapsed{
-    min-width:19em;
+    min-width:9.8em;
     color:rgba(247,233,228,.54);
     font-variant-numeric:tabular-nums;
     letter-spacing:.08em;
@@ -665,8 +665,8 @@
         <p class="quote">树在长，风在吹，<br>而<em>喜欢你</em>这件事，正在发生。</p>
         <div class="live-time">
           <span class="pulse" aria-hidden="true"></span>
-          <span>已共度</span>
-          <strong id="elapsed">20 天 17 小时 06 分 32 秒</strong>
+          <span>今天已相伴</span>
+          <strong id="elapsed">17 小时 06 分 32 秒</strong>
         </div>
         <p class="signature">To. <b id="toName">雪妹</b><span class="sig-heart">♥</span>From. <b id="fromName">学张</b></p>
         <button class="water-btn" id="waterBtn" type="button">
@@ -802,7 +802,14 @@
     $('topDate').textContent = dotted(today);
     document.title = `${config.from} ♥ ${config.to} 的爱情树 · 第 ${day} 天`;
     document.querySelector('meta[name="description"]').setAttribute('content', `一棵为${config.from}和${config.to}生长的爱情树。今天，是在一起的第 ${day} 天。`);
+    currentDayKey = ymd(today);
     updateElapsed();
+  }
+
+  let currentDayKey = '';
+  function refreshDayIfNeeded() {
+    const key = ymd(localToday());
+    if (key !== currentDayKey) updateTexts();
   }
 
   function numberToHan(n) {
@@ -819,17 +826,26 @@
 
   function updateElapsed() {
     const now = new Date();
-    let ms = now - startDate;
+    const dayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    let ms = now - dayStart;
     if (ms < 0) ms = 0;
     const totalSec = Math.floor(ms / 1000);
-    const days = Math.floor(totalSec / 86400);
-    const hours = Math.floor((totalSec % 86400) / 3600);
+    const hours = Math.floor(totalSec / 3600);
     const mins = Math.floor((totalSec % 3600) / 60);
     const secs = totalSec % 60;
-    $('elapsed').textContent = `${days} 天 ${String(hours).padStart(2,'0')} 小时 ${String(mins).padStart(2,'0')} 分 ${String(secs).padStart(2,'0')} 秒`;
+    $('elapsed').textContent = `${String(hours).padStart(2,'0')} 小时 ${String(mins).padStart(2,'0')} 分 ${String(secs).padStart(2,'0')} 秒`;
   }
-  setInterval(updateElapsed, 1000);
+  setInterval(() => {
+    refreshDayIfNeeded();
+    updateElapsed();
+  }, 1000);
   updateTexts();
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+      refreshDayIfNeeded();
+      updateElapsed();
+    }
+  });
 
   /* ---------------- canvas scene ---------------- */
   let W = 0, H = 0, DPR = 1;
@@ -919,7 +935,7 @@
     leaves = [];
 
     function addLeaf(x, y, depth, boost = 1) {
-      if (leaves.length > 3000) return;
+      if (leaves.length > 4200) return;
       const pick = rand();
       let ci = 1;
       if (pick < .26) ci = 0;
@@ -928,7 +944,7 @@
       else if (pick < .82) ci = 3;
       else if (pick < .94) ci = 4;
       else ci = 5;
-      const size = (4.7 + rand() * 5.8) * boost * (isNarrow ? .84 : 1);
+      const size = (5.2 + rand() * 6.4) * boost * (isNarrow ? .84 : 1);
       leaves.push({
         x: x + (rand() - .5) * 9,
         y: y + (rand() - .5) * 8,
@@ -937,7 +953,7 @@
         rot: (rand() - .5) * .8,
         phase: rand() * Math.PI * 2,
         sway: .55 + rand() * 1.5,
-        delay: 2.15 + rand() * 1.75,
+        delay: 1.35 + rand() * 1.45,
         alpha: .48 + rand() * .5,
         depth
       });
@@ -959,10 +975,10 @@
       }
 
       if (depth >= 4) {
-        addLeaf(endX, endY, depth, .88);
-        if (rand() > .55) addLeaf(endX, endY, depth, .74);
-        if (depth >= 6 && rand() > .42) {
-          addLeaf(lerp(x, endX, .45 + rand() * .45), lerp(y, endY, .45 + rand() * .45), depth, .68);
+        addLeaf(endX, endY, depth, .92);
+        if (rand() > .38) addLeaf(endX, endY, depth, .78);
+        if (depth >= 6 && rand() > .32) {
+          addLeaf(lerp(x, endX, .45 + rand() * .45), lerp(y, endY, .45 + rand() * .45), depth, .72);
         }
       }
 
@@ -982,9 +998,9 @@
         grow(endX, endY, childLen, childAngle, childWidth, depth + 1, (rand() - .5) * .2);
       }
 
-      if (depth >= 4 && rand() < .46) {
-        const t = .28 + rand() * .52;
-        addLeaf(x + (endX - x) * t, y + (endY - y) * t, depth, .6);
+      if (depth >= 4 && rand() < .68) {
+        const t = .24 + rand() * .56;
+        addLeaf(x + (endX - x) * t, y + (endY - y) * t, depth, .64);
       }
     }
 
@@ -1020,14 +1036,34 @@
     const crownCy = H * (isNarrow ? .42 : .405);
     const crownRx = isNarrow ? Math.min(W * .69, H * .37) : Math.min(W * .34, H * .54);
     const crownRy = H * (isNarrow ? .215 : .25);
-    const fillCount = isNarrow ? 240 : 320;
+    const fillCount = isNarrow ? 520 : 860;
     for (let i = 0; i < fillCount; i++) {
       const a = rand() * Math.PI * 2;
       const r = Math.sqrt(rand());
-      const px = crownCx + Math.cos(a) * crownRx * r * (0.72 + rand() * .28);
-      const py = crownCy + Math.sin(a) * crownRy * r * (0.72 + rand() * .28);
+      const px = crownCx + Math.cos(a) * crownRx * r * (0.62 + rand() * .38);
+      const py = crownCy + Math.sin(a) * crownRy * r * (0.62 + rand() * .38);
       if (py > H * .57 || py < H * (isNarrow ? .205 : .1)) continue;
-      addLeaf(px, py, 8, .58 + rand() * .22);
+      addLeaf(px, py, 8, .56 + rand() * .24);
+    }
+
+    // smaller inner blossoms give the crown depth and a fuller silhouette
+    const innerCount = isNarrow ? 280 : 460;
+    for (let i = 0; i < innerCount; i++) {
+      const a = rand() * Math.PI * 2;
+      const r = Math.sqrt(rand()) * .9;
+      const px = crownCx + Math.cos(a) * crownRx * r;
+      const py = crownCy + Math.sin(a) * crownRy * r;
+      if (py > H * .6 || py < H * (isNarrow ? .19 : .09)) continue;
+      addLeaf(px, py, 8, .42 + rand() * .22);
+    }
+
+    // feathery clusters around the lower side limbs
+    const sideCount = isNarrow ? 150 : 260;
+    for (let i = 0; i < sideCount; i++) {
+      const side = i % 2 === 0 ? -1 : 1;
+      const px = baseX + side * (W * (.11 + rand() * .17));
+      const py = H * (.36 + rand() * .205);
+      addLeaf(px, py, 8, .46 + rand() * .22);
     }
 
     // On phones, draw the same organic tree in a narrower silhouette so it
@@ -1527,7 +1563,7 @@
     lastFrame = now;
     const time = prefersReduced ? 8 : now / 1000;
     const sinceStart = prefersReduced ? 6 : (now - treeStartedAt) / 1000;
-    const useTreeCache = sinceStart > 4.1;
+    const useTreeCache = sinceStart > 3.25;
 
     ctx.clearRect(0, 0, W, H);
     if (backgroundLayer) ctx.drawImage(backgroundLayer, 0, 0, W, H);
