@@ -1,439 +1,1686 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="记录自己的学习和点点滴滴的进步">
-<meta property="og:type" content="website">
-<meta property="og:title" content="laomaer&#39;s Leaning and Improvement">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="laomaer&#39;s Leaning and Improvement">
-<meta property="og:description" content="记录自己的学习和点点滴滴的进步">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="laomaer">
-<meta property="article:tag" content="通信工程">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>laomaer's Leaning and Improvement</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>学张 ♥ 雪妹 的爱情树 · 第 21 天</title>
+<meta name="theme-color" content="#0b0613">
+<meta name="description" content="一棵为学张和雪妹生长的爱情树。今天，是在一起的第 21 天。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g'%3E%3Cstop stop-color='%23ffd9e2'/%3E%3Cstop offset='1' stop-color='%23ff6f9c'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M32 54C22 45 8 34 8 21 8 12 20 8 27 15l5 6 5-6c7-7 19-3 19 6 0 13-14 24-24 33z'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --cream:#f7e9e4;
+    --cream-soft:rgba(247,233,228,.68);
+    --cream-faint:rgba(247,233,228,.38);
+    --rose:#ff8eae;
+    --rose-light:#ffc4d3;
+    --gold:#e9c79f;
+    --ink:#100711;
+    --serif:"STKaiti","KaiTi","Kaiti SC","Songti SC","Noto Serif SC",serif;
+    --sans:"Optima","PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:100%;height:100%}
+  html{background:#0b0613}
+  body{
+    position:relative;
+    overflow:hidden;
+    color:var(--cream);
+    background:
+      radial-gradient(120% 80% at 50% 110%, #3a1229 0%, rgba(26,10,28,.7) 35%, transparent 70%),
+      linear-gradient(180deg,#05040d 0%,#0a0716 39%,#150a20 69%,#1b0a1c 100%);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    user-select:none;
+  }
 
+  body::before{
+    content:"";
+    position:fixed;
+    inset:-20%;
+    z-index:0;
+    pointer-events:none;
+    background:
+      radial-gradient(closest-side at 20% 25%, rgba(95,57,152,.19), transparent 72%),
+      radial-gradient(closest-side at 79% 34%, rgba(181,56,101,.12), transparent 74%),
+      radial-gradient(closest-side at 50% 90%, rgba(255,116,143,.13), transparent 68%);
+    filter:blur(18px);
+    animation:drift 22s ease-in-out infinite alternate;
+  }
+
+  @keyframes drift{
+    from{transform:translate3d(-1.5%,-.8%,0) scale(1)}
+    to{transform:translate3d(1.8%,1.2%,0) scale(1.05)}
+  }
+
+  #scene{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+    display:block;
+    touch-action:manipulation;
+  }
+
+  .vignette{
+    position:fixed;
+    inset:0;
+    z-index:2;
+    pointer-events:none;
+    background:
+      linear-gradient(180deg,rgba(5,4,13,.4) 0%,transparent 18%,transparent 68%,rgba(8,3,11,.34) 100%),
+      radial-gradient(120% 92% at 50% 44%, transparent 48%, rgba(4,2,9,.46) 100%);
+  }
+
+  .grain{
+    position:fixed;
+    inset:0;
+    z-index:3;
+    opacity:.042;
+    pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.85'/%3E%3C/svg%3E");
+    mix-blend-mode:soft-light;
+  }
+
+  .frame{
+    position:fixed;
+    inset:18px;
+    z-index:4;
+    border:1px solid rgba(247,225,222,.075);
+    pointer-events:none;
+  }
+  .frame::before,.frame::after{
+    content:"";
+    position:absolute;
+    width:34px;
+    height:34px;
+    border-color:rgba(233,199,159,.28);
+    border-style:solid;
+  }
+  .frame::before{left:-1px;top:-1px;border-width:1px 0 0 1px}
+  .frame::after{right:-1px;bottom:-1px;border-width:0 1px 1px 0}
+
+  .hud{
+    position:fixed;
+    inset:0;
+    z-index:5;
+    padding:clamp(28px,4.2vw,66px);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    pointer-events:none;
+  }
+
+  .top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+  }
+
+  .brand{
+    animation:soft-in 1.4s .1s both;
+  }
+
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--gold);
+    font-size:9px;
+    font-weight:400;
+    letter-spacing:.38em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .eyebrow .line{
+    display:inline-block;
+    width:38px;
+    height:1px;
+    background:linear-gradient(90deg,var(--gold),transparent);
+    opacity:.6;
+  }
+  .eyebrow .heart-mini{
+    width:5px;height:5px;
+    display:inline-block;
+    background:var(--rose);
+    transform:rotate(45deg) scale(.8);
+    box-shadow:0 0 8px rgba(255,142,174,.8);
+  }
+
+  h1{
+    display:flex;
+    align-items:center;
+    margin-top:12px;
+    font-family:var(--serif);
+    font-size:clamp(38px,4.35vw,60px);
+    font-weight:400;
+    letter-spacing:.08em;
+    line-height:1.12;
+    white-space:nowrap;
+    text-shadow:0 0 38px rgba(255,151,180,.18);
+  }
+  h1 .love-symbol{
+    margin:0 .3em;
+    color:var(--rose);
+    font-family:var(--serif);
+    font-size:.38em;
+    font-style:normal;
+    letter-spacing:0;
+    transform:translateY(-.08em);
+    filter:drop-shadow(0 0 9px rgba(255,111,151,.55));
+    animation:nameHeart 4.8s ease-in-out infinite;
+  }
+  @keyframes nameHeart{
+    0%,100%{transform:translateY(-.08em) scale(1)}
+    50%{transform:translateY(-.08em) scale(1.11)}
+  }
+
+  .tagline{
+    margin-top:10px;
+    color:var(--cream-faint);
+    font-family:var(--serif);
+    font-size:12px;
+    letter-spacing:.14em;
+    line-height:1.9;
+  }
+  .tagline .tree-word{
+    color:rgba(233,199,159,.82);
+    letter-spacing:.2em;
+  }
+  .tagline .tag-sep{
+    margin:0 .6em;
+    color:rgba(247,233,228,.22);
+  }
+
+  .top-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    pointer-events:auto;
+    animation:soft-in 1.4s .32s both;
+  }
+
+  .date-chip{
+    padding:9px 14px;
+    border:1px solid rgba(247,225,222,.1);
+    border-radius:999px;
+    color:rgba(247,233,228,.42);
+    font-size:9px;
+    letter-spacing:.26em;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+  }
+
+  .ghost-btn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    height:34px;
+    padding:0 14px;
+    color:rgba(247,233,228,.66);
+    background:rgba(255,235,235,.035);
+    border:1px solid rgba(247,225,222,.12);
+    border-radius:999px;
+    font-family:var(--sans);
+    font-size:10px;
+    letter-spacing:.16em;
+    cursor:pointer;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    transition:all .35s ease;
+  }
+  .ghost-btn:hover{
+    color:var(--cream);
+    border-color:rgba(255,164,189,.36);
+    background:rgba(255,142,174,.09);
+    box-shadow:0 0 24px rgba(255,112,151,.12);
+  }
+  .ghost-btn svg{width:12px;height:12px;opacity:.75}
+
+  .bottom{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:30px;
+  }
+
+  .day-panel{
+    position:relative;
+    padding-left:20px;
+    animation:soft-in 1.6s .55s both;
+  }
+  .day-panel::before{
+    content:"";
+    position:absolute;
+    left:0;top:2px;bottom:5px;
+    width:1px;
+    background:linear-gradient(180deg,transparent,rgba(233,199,159,.5) 18%,rgba(255,142,174,.18) 72%,transparent);
+  }
+
+  .day-label{
+    color:rgba(247,233,228,.58);
+    font-family:var(--serif);
+    font-size:13px;
+    letter-spacing:.18em;
+    white-space:nowrap;
+  }
+
+  .day-line{
+    display:flex;
+    align-items:baseline;
+    margin:-3px 0 -1px -4px;
+    line-height:1;
+  }
+  .day-number{
+    display:inline-block;
+    font-family:var(--serif);
+    font-size:clamp(84px,9.8vw,142px);
+    font-weight:400;
+    line-height:1;
+    letter-spacing:-.045em;
+    color:transparent;
+    background:linear-gradient(178deg,#fff8ed 2%,#ffd9c2 43%,#ffa6b9 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    filter:drop-shadow(0 0 26px rgba(255,157,173,.16));
+  }
+  .day-unit{
+    margin-left:11px;
+    color:rgba(247,233,228,.55);
+    font-family:var(--serif);
+    font-size:16px;
+    letter-spacing:.16em;
+  }
+
+  .since{
+    margin-top:4px;
+    color:rgba(247,233,228,.35);
+    font-size:9px;
+    letter-spacing:.2em;
+    line-height:1.8;
+  }
+  .since b{
+    color:rgba(233,199,159,.62);
+    font-weight:400;
+  }
+
+  .right-bottom{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:16px;
+    text-align:right;
+    animation:soft-in 1.6s .8s both;
+  }
+
+  .quote{
+    color:rgba(247,233,228,.47);
+    font-family:var(--serif);
+    font-size:12px;
+    line-height:2;
+    letter-spacing:.14em;
+  }
+  .quote em{
+    font-style:normal;
+    color:rgba(255,177,194,.72);
+  }
+
+  .live-time{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:rgba(247,233,228,.32);
+    font-size:9px;
+    letter-spacing:.16em;
+    white-space:nowrap;
+  }
+  .live-time .pulse{
+    width:5px;height:5px;
+    border-radius:50%;
+    background:var(--rose);
+    box-shadow:0 0 0 0 rgba(255,142,174,.55);
+    animation:pulse 2.4s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(255,142,174,.45)}
+    70%{box-shadow:0 0 0 7px rgba(255,142,174,0)}
+    100%{box-shadow:0 0 0 0 rgba(255,142,174,0)}
+  }
+  #elapsed{
+    min-width:19em;
+    color:rgba(247,233,228,.54);
+    font-variant-numeric:tabular-nums;
+    letter-spacing:.08em;
+  }
+
+  .signature{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    color:rgba(247,233,228,.36);
+    font-family:var(--serif);
+    font-size:11px;
+    letter-spacing:.14em;
+  }
+  .signature b{
+    color:rgba(255,200,212,.8);
+    font-weight:400;
+  }
+  .signature .sig-heart{
+    color:var(--rose);
+    font-size:9px;
+    filter:drop-shadow(0 0 5px rgba(255,112,151,.7));
+  }
+
+  .water-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    height:42px;
+    padding:0 19px;
+    border:1px solid rgba(255,172,194,.24);
+    border-radius:999px;
+    color:#ffeaf0;
+    background:
+      linear-gradient(120deg,rgba(255,133,164,.14),rgba(255,195,165,.06)),
+      rgba(31,12,28,.28);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.09),0 10px 34px rgba(0,0,0,.16);
+    font-family:var(--serif);
+    font-size:11px;
+    letter-spacing:.16em;
+    cursor:pointer;
+    pointer-events:auto;
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    transition:transform .35s ease,box-shadow .35s ease,background .35s ease;
+  }
+  .water-btn:hover{
+    transform:translateY(-2px);
+    background:
+      linear-gradient(120deg,rgba(255,133,164,.22),rgba(255,195,165,.1)),
+      rgba(31,12,28,.34);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 12px 42px rgba(255,98,140,.13);
+  }
+  .water-btn:active{transform:translateY(0) scale(.98)}
+  .water-btn svg{width:14px;height:14px;color:#ffadc1;transition:transform .4s ease}
+  .water-btn:hover svg{transform:rotate(-12deg) scale(1.1)}
+  .water-btn.done{border-color:rgba(255,210,158,.4);color:#fff4dd}
+
+  .toast{
+    position:fixed;
+    left:50%;
+    bottom:34px;
+    z-index:30;
+    transform:translate(-50%,18px);
+    padding:11px 20px;
+    border:1px solid rgba(255,220,222,.16);
+    border-radius:999px;
+    color:rgba(255,246,241,.92);
+    background:rgba(25,10,24,.82);
+    box-shadow:0 12px 46px rgba(0,0,0,.4);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    font-family:var(--serif);
+    font-size:11px;
+    letter-spacing:.12em;
+    opacity:0;
+    pointer-events:none;
+    transition:all .5s cubic-bezier(.2,.7,.2,1);
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  .modal{
+    position:fixed;
+    inset:0;
+    z-index:40;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:22px;
+    background:rgba(4,2,9,.58);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .35s ease,visibility .35s;
+  }
+  .modal.open{opacity:1;visibility:visible}
+  .modal-card{
+    width:min(430px,100%);
+    padding:28px;
+    border:1px solid rgba(255,225,222,.13);
+    border-radius:24px;
+    background:
+      radial-gradient(140% 95% at 100% 0%,rgba(255,121,157,.12),transparent 56%),
+      linear-gradient(155deg,rgba(36,18,35,.97),rgba(16,8,20,.98));
+    box-shadow:0 30px 100px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.07);
+    transform:translateY(12px) scale(.985);
+    transition:transform .45s cubic-bezier(.2,.75,.25,1);
+  }
+  .modal.open .modal-card{transform:none}
+
+  .modal-head{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-bottom:24px;
+  }
+  .modal-kicker{
+    color:rgba(233,199,159,.62);
+    font-size:8px;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+  }
+  .modal-title{
+    margin-top:7px;
+    font-family:var(--serif);
+    font-size:24px;
+    font-weight:400;
+    letter-spacing:.12em;
+  }
+  .modal-close{
+    width:32px;height:32px;
+    display:grid;place-items:center;
+    border:1px solid rgba(255,235,230,.1);
+    border-radius:50%;
+    color:rgba(247,233,228,.5);
+    background:transparent;
+    cursor:pointer;
+    font-size:16px;
+    line-height:1;
+    transition:all .3s;
+  }
+  .modal-close:hover{color:var(--cream);border-color:rgba(255,180,200,.32);transform:rotate(90deg)}
+
+  .field{margin-bottom:15px}
+  .field label{
+    display:block;
+    margin-bottom:7px;
+    color:rgba(247,233,228,.44);
+    font-size:9px;
+    letter-spacing:.18em;
+  }
+  .field input{
+    width:100%;
+    height:44px;
+    padding:0 13px;
+    border:1px solid rgba(255,232,225,.1);
+    border-radius:12px;
+    outline:none;
+    color:var(--cream);
+    background:rgba(255,255,255,.035);
+    font-family:var(--serif);
+    font-size:14px;
+    letter-spacing:.06em;
+    transition:border-color .3s,background .3s,box-shadow .3s;
+    color-scheme:dark;
+  }
+  .field input:focus{
+    border-color:rgba(255,162,187,.38);
+    background:rgba(255,255,255,.055);
+    box-shadow:0 0 0 3px rgba(255,126,160,.06);
+  }
+  .field input::placeholder{color:rgba(247,233,228,.2)}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .field-error{
+    display:none;
+    margin-top:6px;
+    color:#ff9cae;
+    font-size:9px;
+    letter-spacing:.08em;
+  }
+  .field-error.show{display:block}
+
+  .modal-actions{
+    display:flex;
+    gap:10px;
+    margin-top:22px;
+  }
+  .primary-btn,.secondary-btn{
+    height:44px;
+    border-radius:12px;
+    cursor:pointer;
+    font-family:var(--serif);
+    font-size:12px;
+    letter-spacing:.13em;
+    transition:all .3s ease;
+  }
+  .primary-btn{
+    flex:1;
+    border:1px solid rgba(255,202,212,.34);
+    color:#2a0b18;
+    background:linear-gradient(120deg,#ffd7d5,#ff9fba 55%,#f3b99f);
+    box-shadow:0 8px 28px rgba(255,112,151,.2);
+  }
+  .primary-btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+  .secondary-btn{
+    padding:0 15px;
+    border:1px solid rgba(255,235,230,.12);
+    color:rgba(247,233,228,.64);
+    background:rgba(255,255,255,.03);
+  }
+  .secondary-btn:hover{color:var(--cream);border-color:rgba(255,180,200,.3)}
+  .modal-note{
+    margin-top:13px;
+    color:rgba(247,233,228,.25);
+    font-size:9px;
+    line-height:1.7;
+    letter-spacing:.06em;
+  }
+
+  @keyframes soft-in{
+    from{opacity:0;transform:translateY(12px)}
+    to{opacity:1;transform:none}
+  }
+
+  @media (max-width:760px){
+    .frame{inset:9px}
+    .hud{padding:24px 20px max(24px,env(safe-area-inset-bottom))}
+    .date-chip{display:none}
+    .top-actions{position:fixed;top:22px;right:20px}
+    .ghost-btn{padding:0 11px}
+    .ghost-btn .btn-text{display:none}
+    .ghost-btn{width:34px;justify-content:center}
+    .brand{min-width:0}
+    h1{font-size:clamp(28px,8.2vw,34px);letter-spacing:.04em}
+    h1 .love-symbol{margin:0 .22em}
+    .eyebrow{font-size:8px;letter-spacing:.27em;gap:8px}
+    .eyebrow .line{width:22px}
+    .tagline{font-size:9.5px;letter-spacing:.08em;margin-top:8px}
+    .bottom{position:relative;display:block}
+    .day-panel{padding-left:14px;flex:0 0 auto}
+    .day-label{font-size:10.5px;letter-spacing:.06em}
+    .day-number{font-size:72px}
+    .day-unit{font-size:12px;margin-left:6px}
+    .since{font-size:7.5px;letter-spacing:.1em}
+    .quote{display:none}
+    .right-bottom{position:absolute;right:0;bottom:0;display:block}
+    .signature{display:none}
+    .live-time{display:none}
+    .water-btn{height:38px;padding:0 11px;gap:6px;font-size:9px;letter-spacing:.04em;white-space:nowrap}
+    .water-btn svg{width:12px;height:12px;flex:0 0 auto}
+    .toast{bottom:24px;max-width:88vw;text-align:center;white-space:nowrap;font-size:10px}
+    .modal-card{padding:23px 20px;border-radius:20px}
+  }
+
+  @media (max-width:390px){
+    .hud{padding-left:16px;padding-right:16px}
+    .brand #topDate{display:none}
+    .eyebrow .line{width:18px}
+    h1{font-size:27px}
+    .day-number{font-size:62px}
+    .day-label{font-size:9.5px}
+    .water-btn{width:40px;padding:0;justify-content:center;border-radius:50%}
+    .water-btn #waterText{display:none}
+    .top-actions{right:16px}
+  }
+
+  @media (max-height:620px) and (min-width:761px){
+    .tagline,.quote{display:none}
+    .day-number{font-size:84px}
+    h1{font-size:38px}
+    .hud{padding-top:28px;padding-bottom:26px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    body::before{animation:none}
+    .brand,.top-actions,.day-panel,.right-bottom{animation:none}
+  }
+
+  body.preview .brand,
+  body.preview .top-actions,
+  body.preview .day-panel,
+  body.preview .right-bottom{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+  }
+</style>
 </head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+  <div class="frame" aria-hidden="true"></div>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">laomaer's Leaning and Improvement</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">student</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
+  <div class="hud">
+    <header class="top">
+      <div class="brand">
+        <div class="eyebrow">
+          <span class="heart-mini"></span>
+          <span>Our Love Tree</span>
+          <span class="line"></span>
+          <span id="topDate">2026.11.02</span>
+        </div>
+        <h1><span id="titleNameA">学张</span><i class="love-symbol" aria-hidden="true">♥</i><span id="titleNameB">雪妹</span></h1>
+        <p class="tagline"><span class="tree-word">爱情树</span><span class="tag-sep">·</span>把每一次心跳，都种成春天。</p>
+      </div>
+      <div class="top-actions">
+        <span class="date-chip" id="startChip">SINCE 2026.10.13</span>
+        <button class="ghost-btn" id="customizeBtn" type="button" aria-label="定制我们的爱情树">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
+          </svg>
+          <span class="btn-text">定制</span>
+        </button>
+      </div>
     </header>
 
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+    <div class="bottom">
+      <section class="day-panel" aria-label="在一起的天数">
+        <p class="day-label">今天，是在一起的第</p>
+        <div class="day-line">
+          <span class="day-number" id="dayNumber">21</span>
+          <span class="day-unit">天</span>
+        </div>
+        <p class="since">始于 <b id="sinceDate">2026.10.13</b> · 我们故事的第一页</p>
+      </section>
+
+      <div class="right-bottom">
+        <p class="quote">树在长，风在吹，<br>而<em>喜欢你</em>这件事，正在发生。</p>
+        <div class="live-time">
+          <span class="pulse" aria-hidden="true"></span>
+          <span>已经相爱</span>
+          <strong id="elapsed">20 天 17 小时 06 分 32 秒</strong>
+        </div>
+        <p class="signature">To. <b id="toName">雪妹</b><span class="sig-heart">♥</span>From. <b id="fromName">学张</b></p>
+        <button class="water-btn" id="waterBtn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2.7S5.5 9.4 5.5 14.2a6.5 6.5 0 0 0 13 0C18.5 9.4 12 2.7 12 2.7Z"/>
+            <path d="M9 14.6c.3 1.3 1.2 2.1 2.5 2.4"/>
+          </svg>
+          <span id="waterText">为它浇灌一点爱意</span>
+        </button>
+      </div>
+    </div>
   </div>
 
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/30/photo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="laomaer">
-      <meta itemprop="description" content="记录自己的学习和点点滴滴的进步">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="laomaer's Leaning and Improvement">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/30/photo/" class="post-title-link" itemprop="url">photo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-05-30 23:31:02" itemprop="dateCreated datePublished" datetime="2022-05-30T23:31:02+08:00">2022-05-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-31 00:22:09" itemprop="dateModified" datetime="2022-05-31T00:22:09+08:00">2022-05-31</time>
-              </span>
-
-          
-
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <div>
+          <p class="modal-kicker">Make it yours</p>
+          <h2 class="modal-title" id="modalTitle">种下属于你们的树</h2>
         </div>
-      </header>
+        <button class="modal-close" id="modalClose" type="button" aria-label="关闭">×</button>
+      </div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <img src="/2022/05/30/photo/xiao.jpg" class title="小泰和小秦的爱情故事">
-<img src="/2022/05/30/photo/tai.jpg" class title="小泰，没有你，我老秦怎么活啊">
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/28/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="laomaer">
-      <meta itemprop="description" content="记录自己的学习和点点滴滴的进步">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="laomaer's Leaning and Improvement">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/28/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-05-28 14:09:37" itemprop="dateCreated datePublished" datetime="2022-05-28T14:09:37+08:00">2022-05-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
+      <form id="customForm" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="inputTo">TA 的昵称</label>
+            <input id="inputTo" name="to" type="text" maxlength="12" placeholder="雪妹" autocomplete="off">
           </div>
-          
+          <div class="field">
+            <label for="inputFrom">你的昵称</label>
+            <input id="inputFrom" name="from" type="text" maxlength="12" placeholder="学张" autocomplete="off">
+          </div>
+        </div>
+        <div class="field">
+          <label for="inputStart">在一起的第一天</label>
+          <input id="inputStart" name="start" type="date" required>
+          <p class="field-error" id="dateError">纪念日不能晚于今天哦。</p>
+        </div>
+        <div class="modal-actions">
+          <button class="primary-btn" type="submit">让树记住</button>
+          <button class="secondary-btn" id="copyBtn" type="button">复制专属链接</button>
+        </div>
+        <p class="modal-note">小提示：保存后，名字与纪念日会留在当前浏览器里；复制链接可以把这份专属页面送给 TA。</p>
+      </form>
+    </div>
+  </div>
 
 <script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+(() => {
+  'use strict';
+
+  const DEFAULT_START = '2026-10-13';
+  const DEFAULT_TO = '雪妹';
+  const DEFAULT_FROM = '学张';
+  const STORAGE_KEY = 'our-love-tree-v1';
+  const PREVIEW = new URLSearchParams(location.search).has('preview');
+  if (PREVIEW) document.body.classList.add('preview');
+  const prefersReduced = PREVIEW || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+  const $ = (id) => document.getElementById(id);
+  const canvas = $('scene');
+  const ctx = canvas.getContext('2d', { alpha: true });
+
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+  const easeInOut = (t) => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+
+  function mulberry32(seed) {
+    let a = seed >>> 0;
+    return function() {
+      a |= 0; a = a + 0x6D2B79F5 | 0;
+      let t = Math.imul(a ^ a >>> 15, 1 | a);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  /* ---------------- config & dates ---------------- */
+  function safeParseDate(str) {
+    if (!str || !/^\d{4}-\d{2}-\d{2}$/.test(str)) return null;
+    const [y, m, d] = str.split('-').map(Number);
+    const date = new Date(y, m - 1, d);
+    if (date.getFullYear() !== y || date.getMonth() !== m - 1 || date.getDate() !== d) return null;
+    return date;
+  }
+  function localToday() {
+    const n = new Date();
+    return new Date(n.getFullYear(), n.getMonth(), n.getDate());
+  }
+  function ymd(date) {
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, '0');
+    const d = String(date.getDate()).padStart(2, '0');
+    return `${y}-${m}-${d}`;
+  }
+  function dotted(date) { return ymd(date).replaceAll('-', '.'); }
+  function dayDiff(from, to) { return Math.round((to - from) / 86400000); }
+
+  function getInitialConfig() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) {}
+    const q = new URLSearchParams(location.search);
+    const start = safeParseDate(q.get('start')) ? q.get('start') : (safeParseDate(saved.start) ? saved.start : DEFAULT_START);
+    return {
+      to: (q.get('to') || saved.to || DEFAULT_TO).slice(0, 12),
+      from: (q.get('from') || saved.from || DEFAULT_FROM).slice(0, 12),
+      start
+    };
+  }
+
+  let config = getInitialConfig();
+  let startDate = safeParseDate(config.start);
+  if (!startDate || startDate > localToday()) {
+    config.start = DEFAULT_START;
+    startDate = safeParseDate(config.start);
+  }
+
+  function updateTexts() {
+    const today = localToday();
+    const diff = dayDiff(startDate, today);
+    const day = Math.max(1, diff + 1);
+    $('dayNumber').textContent = day;
+    $('toName').textContent = config.to;
+    $('fromName').textContent = config.from;
+    $('titleNameA').textContent = config.from;
+    $('titleNameB').textContent = config.to;
+    $('sinceDate').textContent = dotted(startDate);
+    $('startChip').textContent = `SINCE ${dotted(startDate)}`;
+    $('topDate').textContent = dotted(today);
+    document.title = `${config.from} ♥ ${config.to} 的爱情树 · 第 ${day} 天`;
+    document.querySelector('meta[name="description"]').setAttribute('content', `一棵为${config.from}和${config.to}生长的爱情树。今天，是在一起的第 ${day} 天。`);
+    updateElapsed();
+  }
+
+  function numberToHan(n) {
+    if (n <= 10) return ['零','一','二','三','四','五','六','七','八','九','十'][n];
+    if (n < 20) return '十' + ['一','二','三','四','五','六','七','八','九'][n - 11];
+    if (n === 20) return '二十';
+    if (n < 100) {
+      const tens = Math.floor(n / 10);
+      const ones = n % 10;
+      return ['','一','二','三','四','五','六','七','八','九'][tens] + '十' + (ones ? ['','一','二','三','四','五','六','七','八','九'][ones] : '');
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+    return String(n);
+  }
+
+  function updateElapsed() {
+    const now = new Date();
+    let ms = now - startDate;
+    if (ms < 0) ms = 0;
+    const totalSec = Math.floor(ms / 1000);
+    const days = Math.floor(totalSec / 86400);
+    const hours = Math.floor((totalSec % 86400) / 3600);
+    const mins = Math.floor((totalSec % 3600) / 60);
+    const secs = totalSec % 60;
+    $('elapsed').textContent = `${days} 天 ${String(hours).padStart(2,'0')} 小时 ${String(mins).padStart(2,'0')} 分 ${String(secs).padStart(2,'0')} 秒`;
+  }
+  setInterval(updateElapsed, 1000);
+  updateTexts();
+
+  /* ---------------- canvas scene ---------------- */
+  let W = 0, H = 0, DPR = 1;
+  let branches = [], leaves = [], stars = [], fireflies = [], petals = [], floating = [], sparks = [];
+  let shootingStars = [], nextShooting = 5;
+  let treeStartedAt = performance.now() - (PREVIEW ? 8000 : 0);
+  let lastFrame = performance.now();
+  let lastResize = performance.now();
+  let tick = 0;
+
+  const palette = [
+    { fill: '#ffb4c8', glow: 'rgba(255,122,162,.95)' },
+    { fill: '#ff8eae', glow: 'rgba(255,99,145,.9)' },
+    { fill: '#ffd4dd', glow: 'rgba(255,180,200,.8)' },
+    { fill: '#ff789e', glow: 'rgba(255,90,137,.9)' },
+    { fill: '#ffcfb7', glow: 'rgba(255,178,133,.8)' },
+    { fill: '#f8e4c7', glow: 'rgba(247,210,157,.75)' }
+  ];
+  let heartSprites = [];
+  let glowSprite = null;
+
+  function heartPath(g, x, y, s) {
+    g.beginPath();
+    g.moveTo(x, y + s * .36);
+    g.bezierCurveTo(x - s * .72, y - s * .12, x - s * .66, y - s * .84, x - s * .18, y - s * .84);
+    g.bezierCurveTo(x - s * .06, y - s * .84, x, y - s * .72, x, y - s * .6);
+    g.bezierCurveTo(x, y - s * .72, x + s * .06, y - s * .84, x + s * .18, y - s * .84);
+    g.bezierCurveTo(x + s * .66, y - s * .84, x + s * .72, y - s * .12, x, y + s * .36);
+    g.closePath();
+  }
+
+  function makeHeartSprite(color) {
+    const c = document.createElement('canvas');
+    c.width = 96; c.height = 96;
+    const g = c.getContext('2d');
+    g.translate(48, 50);
+    g.shadowColor = color.glow;
+    g.shadowBlur = 16;
+    g.fillStyle = color.fill;
+    heartPath(g, 0, 0, 30);
+    g.fill();
+    g.shadowBlur = 0;
+    const grd = g.createLinearGradient(0, -28, 0, 18);
+    grd.addColorStop(0, 'rgba(255,255,255,.36)');
+    grd.addColorStop(.55, 'rgba(255,255,255,0)');
+    g.fillStyle = grd;
+    heartPath(g, 0, 0, 29);
+    g.fill();
+    return c;
+  }
+
+  function makeGlowSprite(inner, outer) {
+    const c = document.createElement('canvas');
+    c.width = 96; c.height = 96;
+    const g = c.getContext('2d');
+    const grad = g.createRadialGradient(48, 48, 0, 48, 48, 47);
+    grad.addColorStop(0, inner);
+    grad.addColorStop(.22, inner.replace(/[\d.]+\)$/, '.38)'));
+    grad.addColorStop(1, outer);
+    g.fillStyle = grad;
+    g.fillRect(0, 0, 96, 96);
+    return c;
+  }
+
+  function initSprites() {
+    heartSprites = palette.map(makeHeartSprite);
+    glowSprite = makeGlowSprite('rgba(255,173,191,.9)', 'rgba(255,105,147,0)');
+  }
+  initSprites();
+
+  function windAt(y, time) {
+    if (prefersReduced) return 0;
+    const h = clamp(1 - y / (H * .88), 0, 1);
+    return (Math.sin(time * .62 + y * .007) * 3.6 + Math.sin(time * 1.31 + y * .002 + 1.7) * 1.25) * Math.pow(h, 1.45);
+  }
+
+  function buildTree() {
+    const rand = mulberry32(20261013);
+    const isNarrow = W < 620;
+    const baseX = W * .5;
+    const baseY = H * .965;
+    const trunkLen = H * (isNarrow ? .205 : .225);
+    const baseWidth = clamp(Math.min(W, H) * .019, 7, 20);
+    const maxDepth = 8;
+    branches = [];
+    leaves = [];
+
+    function addLeaf(x, y, depth, boost = 1) {
+      if (leaves.length > 3000) return;
+      const pick = rand();
+      let ci = 1;
+      if (pick < .26) ci = 0;
+      else if (pick < .47) ci = 1;
+      else if (pick < .65) ci = 2;
+      else if (pick < .82) ci = 3;
+      else if (pick < .94) ci = 4;
+      else ci = 5;
+      const size = (4.7 + rand() * 5.8) * boost * (isNarrow ? .84 : 1);
+      leaves.push({
+        x: x + (rand() - .5) * 9,
+        y: y + (rand() - .5) * 8,
+        size,
+        color: ci,
+        rot: (rand() - .5) * .8,
+        phase: rand() * Math.PI * 2,
+        sway: .55 + rand() * 1.5,
+        delay: 2.15 + rand() * 1.75,
+        alpha: .48 + rand() * .5,
+        depth
+      });
+    }
+
+    function grow(x, y, len, angle, width, depth, bendSeed) {
+      const bend = bendSeed * (depth === 0 ? .7 : 1);
+      const endX = x + Math.cos(angle) * len;
+      const endY = y + Math.sin(angle) * len;
+      const bendX = (x + endX) * .5 + Math.cos(angle + Math.PI / 2) * len * bend;
+      const bendY = (y + endY) * .5 + Math.sin(angle + Math.PI / 2) * len * bend;
+
+      branches.push({ x1:x, y1:y, cx:bendX, cy:bendY, x2:endX, y2:endY, width, depth });
+
+      if (depth >= maxDepth) {
+        addLeaf(endX, endY, depth, 1.06);
+        if (rand() > .35) addLeaf(endX, endY, depth, .88);
+        return;
+      }
+
+      if (depth >= 4) {
+        addLeaf(endX, endY, depth, .88);
+        if (rand() > .55) addLeaf(endX, endY, depth, .74);
+        if (depth >= 6 && rand() > .42) {
+          addLeaf(lerp(x, endX, .45 + rand() * .45), lerp(y, endY, .45 + rand() * .45), depth, .68);
+        }
+      }
+
+      let count = 2;
+      let spread = (depth === 0 ? (isNarrow ? .44 : .58) : (isNarrow ? .255 : .34) + rand() * .17);
+      if (depth === 0) count = 3;
+      if (depth > 1 && rand() < .12) count = 3;
+
+      const baseAngles = count === 3 ? [-spread, (rand() - .5) * .1, spread] : [-spread, spread];
+      for (let i = 0; i < count; i++) {
+        let childAngle = angle + baseAngles[i] + (rand() - .5) * (depth === 0 ? .11 : .25);
+        if (depth === 0) {
+          childAngle = -Math.PI / 2 + baseAngles[i] * .92 + (rand() - .5) * .08;
+        }
+        const childLen = len * (depth === 0 ? ((isNarrow ? .78 : .72) + rand() * .07) : ((isNarrow ? .73 : .68) + rand() * .1));
+        const childWidth = width * (depth === 0 ? .64 : (.64 + rand() * .07));
+        grow(endX, endY, childLen, childAngle, childWidth, depth + 1, (rand() - .5) * .2);
+      }
+
+      if (depth >= 4 && rand() < .46) {
+        const t = .28 + rand() * .52;
+        addLeaf(x + (endX - x) * t, y + (endY - y) * t, depth, .6);
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
+
+    grow(baseX, baseY, trunkLen, -Math.PI / 2 + .015, baseWidth, 0, .035);
+
+    // roots: quiet silhouettes under the ground line
+    for (let i = 0; i < 7; i++) {
+      const side = i % 2 === 0 ? -1 : 1;
+      const startX = baseX + (rand() - .5) * baseWidth * .9;
+      const startY = baseY - rand() * 12;
+      const len = W * (.045 + rand() * .065);
+      const ex = startX + side * len;
+      const ey = startY + 4 + rand() * 20;
+      branches.push({
+        x1:startX, y1:startY, cx:(startX + ex) * .5, cy:startY + 10,
+        x2:ex, y2:ey, width:baseWidth * (.16 + rand() * .22), depth: 0, root:true
+      });
+    }
+
+    // a few low twigs for a natural silhouette
+    const baseLift = H * .12;
+    for (let i = 0; i < 12; i++) {
+      const sy = baseY - baseLift - rand() * H * .1;
+      const side = rand() > .5 ? 1 : -1;
+      const sx = baseX + (rand() - .5) * baseWidth * .45;
+      const ex = sx + side * (W * .025 + rand() * W * .055);
+      const ey = sy - H * .028 - rand() * H * .06;
+      branches.push({ x1:sx,y1:sy,cx:(sx+ex)*.5,cy:sy-8,x2:ex,y2:ey,width:baseWidth*.12 + rand()*1.2,depth:2,root:false });
+    }
+
+    // fill the crown with a soft inner cloud of blossoms, not only at branch tips
+    const crownCx = baseX + W * (isNarrow ? 0 : .008);
+    const crownCy = H * (isNarrow ? .42 : .405);
+    const crownRx = isNarrow ? Math.min(W * .69, H * .37) : Math.min(W * .34, H * .54);
+    const crownRy = H * (isNarrow ? .215 : .25);
+    const fillCount = isNarrow ? 240 : 320;
+    for (let i = 0; i < fillCount; i++) {
+      const a = rand() * Math.PI * 2;
+      const r = Math.sqrt(rand());
+      const px = crownCx + Math.cos(a) * crownRx * r * (0.72 + rand() * .28);
+      const py = crownCy + Math.sin(a) * crownRy * r * (0.72 + rand() * .28);
+      if (py > H * .57 || py < H * (isNarrow ? .205 : .1)) continue;
+      addLeaf(px, py, 8, .58 + rand() * .22);
+    }
+
+    // On phones, draw the same organic tree in a narrower silhouette so it
+    // fits the portrait screen without squashing the heart-shaped blossoms.
+    if (isNarrow) {
+      const squeezeX = .58;
+      const squeezeY = .82;
+      for (const b of branches) {
+        b.x1 = baseX + (b.x1 - baseX) * squeezeX;
+        b.cx = baseX + (b.cx - baseX) * squeezeX;
+        b.x2 = baseX + (b.x2 - baseX) * squeezeX;
+        b.y1 = baseY + (b.y1 - baseY) * squeezeY;
+        b.cy = baseY + (b.cy - baseY) * squeezeY;
+        b.y2 = baseY + (b.y2 - baseY) * squeezeY;
+      }
+      for (const l of leaves) {
+        l.x = baseX + (l.x - baseX) * squeezeX;
+        l.y = baseY + (l.y - baseY) * squeezeY;
+      }
+    }
   }
+
+  function buildSky() {
+    const rand = mulberry32(77123);
+    stars = [];
+    const starCount = clamp(Math.round(W * H / 7300), 90, 260);
+    for (let i = 0; i < starCount; i++) {
+      stars.push({
+        x: rand() * W,
+        y: rand() * H * .78,
+        r: .35 + rand() * 1.05,
+        alpha: .18 + rand() * .66,
+        phase: rand() * Math.PI * 2,
+        speed: .5 + rand() * 1.5,
+        warm: rand() > .83
+      });
+    }
+
+    fireflies = [];
+    for (let i = 0; i < 28; i++) {
+      fireflies.push({
+        x: W * .22 + rand() * W * .56,
+        y: H * .42 + rand() * H * .51,
+        r: 1 + rand() * 2.1,
+        phase: rand() * Math.PI * 2,
+        speed: .12 + rand() * .28,
+        drift: 5 + rand() * 17,
+        alpha: .2 + rand() * .55
+      });
+    }
+
+    petals = [];
+    for (let i = 0; i < 32; i++) {
+      petals.push({
+        x: W * .27 + rand() * W * .46,
+        y: H * .28 + rand() * H * .46,
+        size: 2.2 + rand() * 3.8,
+        speed: 7 + rand() * 14,
+        drift: 12 + rand() * 28,
+        phase: rand() * Math.PI * 2,
+        rot: rand() * Math.PI * 2,
+        spin: (rand() - .5) * .9,
+        alpha: .22 + rand() * .4,
+        color: Math.floor(rand() * 5)
+      });
+    }
+
+    shootingStars = [];
+    nextShooting = 4 + Math.random() * 7;
+  }
+
+  function resize() {
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = Math.round(W * DPR);
+    canvas.height = Math.round(H * DPR);
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    buildTree();
+    buildSky();
+    lastResize = performance.now();
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resize, 140);
+  }, { passive:true });
+
+  resize();
+
+  let moonX = 0, moonY = 0;
+
+  function drawBackdrop(time) {
+    // deep sky wash
+    const sky = ctx.createLinearGradient(0, 0, 0, H);
+    sky.addColorStop(0, '#05040d');
+    sky.addColorStop(.34, '#090615');
+    sky.addColorStop(.64, '#180b1d');
+    sky.addColorStop(.84, '#281020');
+    sky.addColorStop(1, '#110611');
+    ctx.fillStyle = sky;
+    ctx.fillRect(0, 0, W, H);
+
+    // moon
+    moonX = W * .815;
+    moonY = H * .155;
+    const moonR = clamp(Math.min(W, H) * .063, 30, 66);
+    const moonGlow = ctx.createRadialGradient(moonX, moonY, moonR * .2, moonX, moonY, moonR * 4.2);
+    moonGlow.addColorStop(0, 'rgba(255,231,206,.22)');
+    moonGlow.addColorStop(.18, 'rgba(255,196,168,.1)');
+    moonGlow.addColorStop(.52, 'rgba(255,133,150,.035)');
+    moonGlow.addColorStop(1, 'rgba(255,120,145,0)');
+    ctx.fillStyle = moonGlow;
+    ctx.fillRect(moonX - moonR * 4.3, moonY - moonR * 4.3, moonR * 8.6, moonR * 8.6);
+
+    const moon = ctx.createRadialGradient(moonX - moonR * .28, moonY - moonR * .3, moonR * .08, moonX, moonY, moonR);
+    moon.addColorStop(0, 'rgba(255,248,227,.92)');
+    moon.addColorStop(.7, 'rgba(255,224,199,.72)');
+    moon.addColorStop(1, 'rgba(244,177,167,.28)');
+    ctx.save();
+    ctx.globalCompositeOperation = 'screen';
+    ctx.fillStyle = moon;
+    ctx.beginPath();
+    ctx.arc(moonX, moonY, moonR, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    // soft rose nebula behind the canopy
+    const crownX = W * .5;
+    const crownY = H * .49;
+    const glowR = Math.max(W * .34, H * .56);
+    const aura = ctx.createRadialGradient(crownX, crownY, 0, crownX, crownY, glowR);
+    aura.addColorStop(0, 'rgba(255,113,149,.15)');
+    aura.addColorStop(.31, 'rgba(226,82,127,.105)');
+    aura.addColorStop(.62, 'rgba(137,65,141,.055)');
+    aura.addColorStop(1, 'rgba(50,20,60,0)');
+    ctx.save();
+    ctx.globalCompositeOperation = 'screen';
+    ctx.fillStyle = aura;
+    ctx.fillRect(0, 0, W, H);
+    ctx.restore();
+
+    // stars
+    for (const s of stars) {
+      const twinkle = .62 + .38 * Math.sin(time * s.speed + s.phase);
+      const a = s.alpha * twinkle;
+      if (s.r > 1.1) {
+        const g = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 4.5);
+        g.addColorStop(0, s.warm ? `rgba(255,220,185,${a})` : `rgba(225,225,255,${a})`);
+        g.addColorStop(.4, s.warm ? `rgba(255,190,160,${a*.28})` : `rgba(180,195,255,${a*.25})`);
+        g.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.fillStyle = g;
+        ctx.fillRect(s.x - s.r * 4.5, s.y - s.r * 4.5, s.r * 9, s.r * 9);
+      } else {
+        ctx.fillStyle = s.warm ? `rgba(255,222,190,${a})` : `rgba(232,232,255,${a})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // one or two delicate shooting stars
+    if (!prefersReduced) {
+      if (time > nextShooting) {
+        shootingStars.push({
+          x: W * (.17 + Math.random() * .48),
+          y: H * (.04 + Math.random() * .18),
+          vx: 5.5 + Math.random() * 3.2,
+          vy: 2.1 + Math.random() * 1.3,
+          life: 0,
+          max: 1.0 + Math.random() * .5
+        });
+        nextShooting = time + 8 + Math.random() * 9;
+      }
+      for (let i = shootingStars.length - 1; i >= 0; i--) {
+        const s = shootingStars[i];
+        s.life += .016;
+        s.x += s.vx; s.y += s.vy;
+        const k = 1 - s.life / s.max;
+        if (k <= 0) { shootingStars.splice(i, 1); continue; }
+        const grad = ctx.createLinearGradient(s.x, s.y, s.x - s.vx * 15, s.y - s.vy * 15);
+        grad.addColorStop(0, `rgba(255,238,215,${.72 * k})`);
+        grad.addColorStop(1, 'rgba(255,200,210,0)');
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 1.1;
+        ctx.beginPath();
+        ctx.moveTo(s.x, s.y);
+        ctx.lineTo(s.x - s.vx * 14, s.y - s.vy * 14);
+        ctx.stroke();
+      }
+    }
+  }
+
+  function drawGround(time) {
+    const baseY = H * .902;
+    const ground = ctx.createLinearGradient(0, baseY - H * .08, 0, H);
+    ground.addColorStop(0, 'rgba(16,7,18,0)');
+    ground.addColorStop(.28, 'rgba(16,6,17,.65)');
+    ground.addColorStop(.7, 'rgba(10,3,12,.96)');
+    ground.addColorStop(1, '#07020a');
+    ctx.fillStyle = ground;
+    ctx.beginPath();
+    ctx.moveTo(0, H);
+    ctx.lineTo(0, baseY + 8);
+    ctx.bezierCurveTo(W * .16, baseY - 12, W * .35, baseY + 7, W * .5, baseY + 2);
+    ctx.bezierCurveTo(W * .67, baseY - 4, W * .84, baseY + 12, W, baseY + 1);
+    ctx.lineTo(W, H);
+    ctx.closePath();
+    ctx.fill();
+
+    // warm light pooling at the roots
+    const groundGlow = ctx.createRadialGradient(W * .5, baseY + 22, 0, W * .5, baseY + 22, Math.min(W, H) * .27);
+    groundGlow.addColorStop(0, 'rgba(255,145,161,.17)');
+    groundGlow.addColorStop(.33, 'rgba(205,85,118,.08)');
+    groundGlow.addColorStop(1, 'rgba(55,20,45,0)');
+    ctx.save();
+    ctx.globalCompositeOperation = 'screen';
+    ctx.fillStyle = groundGlow;
+    ctx.fillRect(W * .15, H * .72, W * .7, H * .28);
+    ctx.restore();
+
+    // tiny flowers / grass along the ground line
+    const rand = mulberry32(9902);
+    ctx.save();
+    for (let i = 0; i < 44; i++) {
+      const x = rand() * W;
+      const y = baseY + 6 + rand() * H * .055;
+      const h = 5 + rand() * 22;
+      const sway = Math.sin(time * .9 + i) * 1.4;
+      ctx.strokeStyle = `rgba(${56 + rand()*28},${28 + rand()*22},${47 + rand()*20},${.36 + rand()*.35})`;
+      ctx.lineWidth = .7 + rand() * .7;
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.quadraticCurveTo(x + sway * .5, y - h * .55, x + sway, y - h);
+      ctx.stroke();
+      if (rand() > .82) {
+        ctx.fillStyle = `rgba(255,${125 + rand()*60},${150 + rand()*50},${.42 + rand()*.36})`;
+        ctx.beginPath();
+        ctx.arc(x + sway, y - h, 1 + rand() * 1.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+    ctx.restore();
+  }
+
+  function drawBranch(b, time, reveal) {
+    if (reveal <= 0) return;
+    const sx = b.x1 + windAt(b.y1, time);
+    const sy = b.y1;
+    const ex = b.x2 + windAt(b.y2, time);
+    const ey = b.y2;
+    const cx = b.cx + windAt(b.cy, time);
+    const cy = b.cy;
+
+    let x0 = sx, y0 = sy, x1 = cx, y1 = cy, x2 = ex, y2 = ey;
+    if (reveal < 1) {
+      const t = easeOut(reveal);
+      const ax = lerp(sx, cx, t), ay = lerp(sy, cy, t);
+      const bx = lerp(cx, ex, t), by = lerp(cy, ey, t);
+      x1 = lerp(ax, bx, t); y1 = lerp(ay, by, t);
+      x2 = lerp(ax, x1, t); y2 = lerp(ay, y1, t);
+    }
+
+    const w = Math.max(.55, b.width);
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    if (b.root) {
+      ctx.strokeStyle = `rgba(10,4,10,${.78 * reveal})`;
+      ctx.lineWidth = w;
+      ctx.beginPath();
+      ctx.moveTo(x0, y0);
+      ctx.quadraticCurveTo(x1, y1, x2, y2);
+      ctx.stroke();
+      return;
+    }
+
+    if (b.depth <= 2) {
+      ctx.save();
+      ctx.shadowColor = 'rgba(255,138,165,.18)';
+      ctx.shadowBlur = b.depth === 0 ? 16 : 8;
+      ctx.strokeStyle = `rgba(19,8,15,${.92 * reveal})`;
+      ctx.lineWidth = w;
+      ctx.beginPath();
+      ctx.moveTo(x0, y0);
+      ctx.quadraticCurveTo(x1, y1, x2, y2);
+      ctx.stroke();
+      ctx.restore();
+
+      ctx.strokeStyle = `rgba(173,92,112,${.17 * reveal})`;
+      ctx.lineWidth = Math.max(.8, w * .23);
+      ctx.beginPath();
+      ctx.moveTo(x0, y0);
+      ctx.quadraticCurveTo(x1, y1, x2, y2);
+      ctx.stroke();
+    } else {
+      const a = clamp(.55 + b.depth * .035, .55, .84) * reveal;
+      ctx.strokeStyle = b.depth < 5
+        ? `rgba(64,27,40,${a})`
+        : `rgba(112,52,68,${a * .88})`;
+      ctx.lineWidth = w;
+      ctx.beginPath();
+      ctx.moveTo(x0, y0);
+      ctx.quadraticCurveTo(x1, y1, x2, y2);
+      ctx.stroke();
+    }
+  }
+
+  function drawLeaves(time, sinceStart) {
+    const bloomGlobal = clamp((sinceStart - 2.0) / 1.6, 0, 1);
+    if (bloomGlobal <= 0) return;
+    for (const l of leaves) {
+      const p = clamp((sinceStart - l.delay) / 1.15, 0, 1);
+      if (p <= 0) continue;
+      const spring = prefersReduced ? 1 : (p < 1 ? easeOut(p) : 1 + Math.sin((p - 1) * 14) * .015);
+      const swayX = windAt(l.y, time) + (prefersReduced ? 0 : Math.sin(time * .8 * l.sway + l.phase) * 1.7);
+      const swayY = prefersReduced ? 0 : Math.cos(time * .55 + l.phase) * .7;
+      const size = l.size * spring;
+      if (size < .3) continue;
+      const rot = l.rot + (prefersReduced ? 0 : Math.sin(time * .42 + l.phase) * .13);
+      const alpha = l.alpha * clamp(p * 1.5, 0, 1) * (.86 + .14 * Math.sin(time * .9 + l.phase));
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.translate(l.x + swayX, l.y + swayY);
+      ctx.rotate(rot);
+      const sprite = heartSprites[l.color];
+      const s = size * 2.65;
+      ctx.drawImage(sprite, -s / 2, -s / 2, s, s);
+      ctx.restore();
+    }
+  }
+
+  function drawPetals(time, dt) {
+    if (prefersReduced || time < 4.2) return;
+    for (const p of petals) {
+      p.y += p.speed * dt;
+      p.x += Math.sin(time * .55 + p.phase) * p.drift * dt;
+      p.rot += p.spin * dt;
+      if (p.y > H * .96 || p.x < W * .08 || p.x > W * .92) {
+        p.x = W * (.27 + Math.random() * .46);
+        p.y = H * (.25 + Math.random() * .24);
+        p.alpha = .18 + Math.random() * .36;
+      }
+      const a = p.alpha * clamp((p.y - H * .25) / (H * .18), 0, 1);
+      ctx.save();
+      ctx.globalAlpha = a;
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      const s = p.size * 2.7;
+      ctx.drawImage(heartSprites[p.color], -s / 2, -s / 2, s, s);
+      ctx.restore();
+    }
+  }
+
+  function drawFireflies(time) {
+    if (!glowSprite) return;
+    for (const f of fireflies) {
+      const pulse = .38 + .62 * (0.5 + .5 * Math.sin(time * .7 + f.phase));
+      const x = f.x + (prefersReduced ? 0 : Math.sin(time * f.speed + f.phase) * f.drift);
+      const y = f.y + (prefersReduced ? 0 : Math.cos(time * f.speed * .8 + f.phase * 1.2) * f.drift * .5);
+      const s = f.r * 10;
+      ctx.save();
+      ctx.globalAlpha = f.alpha * pulse;
+      ctx.drawImage(glowSprite, x - s / 2, y - s / 2, s, s);
+      ctx.restore();
+      ctx.save();
+      ctx.globalAlpha = .5 * pulse;
+      ctx.fillStyle = '#ffe9bd';
+      ctx.beginPath();
+      ctx.arc(x, y, .8, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+
+  function drawFloating(time, dt) {
+    for (let i = floating.length - 1; i >= 0; i--) {
+      const f = floating[i];
+      f.life += dt;
+      f.x += f.vx * dt;
+      f.y += f.vy * dt;
+      f.vy += f.gravity * dt;
+      const k = clamp(1 - f.life / f.max, 0, 1);
+      if (k <= 0) { floating.splice(i, 1); continue; }
+      const s = f.size * (0.35 + .65 * easeOut(clamp(f.life * 4, 0, 1)));
+      ctx.save();
+      ctx.globalAlpha = k * f.alpha;
+      ctx.translate(f.x, f.y);
+      ctx.rotate(f.rot + f.life * f.spin);
+      ctx.drawImage(heartSprites[f.color], -s * 1.35, -s * 1.35, s * 2.7, s * 2.7);
+      ctx.restore();
+    }
+  }
+
+  function drawSparks(time, dt) {
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      const s = sparks[i];
+      s.life += dt;
+      const k = 1 - s.life / s.max;
+      if (k <= 0) { sparks.splice(i, 1); continue; }
+      s.x += s.vx * dt;
+      s.y += s.vy * dt;
+      s.vy += 9 * dt;
+      ctx.save();
+      ctx.globalAlpha = k * .9;
+      ctx.fillStyle = s.color;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r * k, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+
+  function render(now) {
+    const dt = Math.min(.038, (now - lastFrame) / 1000);
+    lastFrame = now;
+    const time = prefersReduced ? 8 : now / 1000;
+    const sinceStart = prefersReduced ? 6 : (now - treeStartedAt) / 1000;
+
+    ctx.clearRect(0, 0, W, H);
+    drawBackdrop(time);
+    drawGround(time);
+
+    // tree reveal, bottom to crown
+    for (const b of branches) {
+      const reveal = clamp((sinceStart - .08 - b.depth * .16) / 1.08, 0, 1);
+      drawBranch(b, time, reveal);
+    }
+
+    // canopy glow behind leaves
+    if (sinceStart > 1.8) {
+      const k = clamp((sinceStart - 1.8) / 2.2, 0, 1);
+      const grad = ctx.createRadialGradient(W * .5, H * .45, 10, W * .5, H * .46, Math.min(W, H) * .34);
+      grad.addColorStop(0, `rgba(255,137,167,${.075 * k})`);
+      grad.addColorStop(.5, `rgba(255,113,151,${.035 * k})`);
+      grad.addColorStop(1, 'rgba(255,89,132,0)');
+      ctx.save();
+      ctx.globalCompositeOperation = 'screen';
+      ctx.fillStyle = grad;
+      ctx.fillRect(W * .12, H * .08, W * .76, H * .72);
+      ctx.restore();
+    }
+
+    drawLeaves(time, sinceStart);
+    drawPetals(time, dt);
+    drawFireflies(time);
+    drawFloating(time, dt);
+    drawSparks(time, dt);
+
+    tick++;
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame((t) => { lastFrame = t; render(t); });
+
+  /* ---------------- interactions ---------------- */
+  function spawnBurst(x, y, count = 18, up = true) {
+    for (let i = 0; i < count; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = 12 + Math.random() * (up ? 40 : 70);
+      floating.push({
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - (up ? 30 : 3),
+        gravity: up ? 12 : 25,
+        life: 0,
+        max: 1.8 + Math.random() * 1.8,
+        size: 2.5 + Math.random() * 5.3,
+        color: Math.floor(Math.random() * 6),
+        alpha: .4 + Math.random() * .5,
+        rot: Math.random() * Math.PI * 2,
+        spin: (Math.random() - .5) * 1.6
+      });
+    }
+    for (let i = 0; i < Math.min(16, count); i++) {
+      const a = Math.random() * Math.PI * 2;
+      const v = 20 + Math.random() * 85;
+      sparks.push({
+        x, y,
+        vx: Math.cos(a) * v,
+        vy: Math.sin(a) * v - 20,
+        r: .8 + Math.random() * 2,
+        life: 0,
+        max: .7 + Math.random() * 1.2,
+        color: Math.random() > .45 ? 'rgba(255,224,181,.95)' : 'rgba(255,171,190,.95)'
+      });
+    }
+  }
+
+  function treeCenter() {
+    return { x: W * .5, y: H * .42 };
+  }
+
+  const waterBtn = $('waterBtn');
+  let waterUses = 0;
+  waterBtn.addEventListener('click', () => {
+    waterUses++;
+    const c = treeCenter();
+    spawnBurst(c.x, c.y, 38, false);
+    spawnBurst(W * .5, H * .91, 16, true);
+    waterBtn.classList.add('done');
+    $('waterText').textContent = waterUses === 1 ? '爱意已送达 ♥' : `第 ${waterUses} 次，爱意 +1`;
+    showToast('哗啦——爱情树又长高了一点点');
+    setTimeout(() => {
+      waterBtn.classList.remove('done');
+      $('waterText').textContent = '为它浇灌一点爱意';
+    }, 2800);
+  });
+
+  document.addEventListener('pointerdown', (e) => {
+    if (e.target.closest('button, input, .modal, .modal-card, a')) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    spawnBurst(e.clientX, e.clientY, 12, true);
+  }, { passive:true });
+
+  // gentle double-click / double-tap on tree releases a rain of hearts
+  let lastTap = 0;
+  canvas.addEventListener('pointerdown', (e) => {
+    const now = Date.now();
+    if (now - lastTap < 340) {
+      const c = treeCenter();
+      spawnBurst(c.x, c.y + H * .08, 45, true);
+      showToast('心动的信号，收到啦 ♥');
+    }
+    lastTap = now;
+  });
+
+  let toastTimer;
+  function showToast(message) {
+    const toast = $('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+  }
+
+  /* ---------------- customization ---------------- */
+  const modal = $('modal');
+  const form = $('customForm');
+  const inputTo = $('inputTo');
+  const inputFrom = $('inputFrom');
+  const inputStart = $('inputStart');
+  const dateError = $('dateError');
+
+  function openModal() {
+    inputTo.value = config.to === '你' ? '' : config.to;
+    inputFrom.value = config.from === '我' ? '' : config.from;
+    inputStart.value = config.start;
+    inputStart.max = ymd(localToday());
+    dateError.classList.remove('show');
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    setTimeout(() => inputTo.focus(), 180);
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  $('customizeBtn').addEventListener('click', openModal);
+  $('modalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const to = (inputTo.value.trim() || DEFAULT_TO).slice(0, 12);
+    const from = (inputFrom.value.trim() || DEFAULT_FROM).slice(0, 12);
+    const parsed = safeParseDate(inputStart.value);
+    if (!parsed || parsed > localToday()) {
+      dateError.classList.add('show');
+      inputStart.focus();
+      return;
+    }
+    config = { to, from, start: inputStart.value };
+    startDate = parsed;
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(config)); } catch(err) {}
+    const q = new URLSearchParams({ to: config.to, from: config.from, start: config.start });
+    history.replaceState(null, '', `${location.pathname}?${q.toString()}`);
+    updateTexts();
+    closeModal();
+
+    // bloom a little celebration around the trunk
+    const c = treeCenter();
+    spawnBurst(c.x, c.y + H * .16, 42, true);
+    showToast(`已经为 ${config.to} 和 ${config.from} 种好了这棵树`);
+  });
+
+  $('copyBtn').addEventListener('click', async () => {
+    const to = (inputTo.value.trim() || DEFAULT_TO).slice(0, 12);
+    const from = (inputFrom.value.trim() || DEFAULT_FROM).slice(0, 12);
+    const start = safeParseDate(inputStart.value) ? inputStart.value : config.start;
+    const q = new URLSearchParams({ to, from, start });
+    const url = `${location.origin}${location.pathname}?${q.toString()}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast('专属链接已复制，去送给 TA 吧');
+    } catch(err) {
+      const temp = document.createElement('textarea');
+      temp.value = url;
+      temp.style.position = 'fixed';
+      temp.style.opacity = '0';
+      document.body.appendChild(temp);
+      temp.select();
+      try { document.execCommand('copy'); showToast('专属链接已复制'); }
+      catch(e2) { showToast('复制失败，请手动复制地址栏链接'); }
+      temp.remove();
+    }
+  });
+
+  // subtle parallax for the UI, pointer devices only
+  if (!prefersReduced && window.matchMedia('(pointer:fine)').matches) {
+    let px = 0, py = 0, tx = 0, ty = 0;
+    document.addEventListener('pointermove', (e) => {
+      tx = (e.clientX / W - .5) * 7;
+      ty = (e.clientY / H - .5) * 5;
+    }, { passive:true });
+    const parallax = () => {
+      px = lerp(px, tx, .04);
+      py = lerp(py, ty, .04);
+      const brand = document.querySelector('.brand');
+      const rb = document.querySelector('.right-bottom');
+      const dp = document.querySelector('.day-panel');
+      if (brand) brand.style.transform = `translate(${px * .25}px,${py * .25}px)`;
+      if (rb) rb.style.transform = `translate(${px * .18}px,${py * .18}px)`;
+      if (dp) dp.style.transform = `translate(${px * .12}px,${py * .12}px)`;
+      requestAnimationFrame(parallax);
+    };
+    requestAnimationFrame(parallax);
+  }
+})();
 </script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">laomaer</p>
-  <div class="site-description" itemprop="description">记录自己的学习和点点滴滴的进步</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">laomaer</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
 </body>
 </html>
