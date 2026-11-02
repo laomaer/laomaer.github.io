@@ -36,25 +36,6 @@
     user-select:none;
   }
 
-  body::before{
-    content:"";
-    position:fixed;
-    inset:-20%;
-    z-index:0;
-    pointer-events:none;
-    background:
-      radial-gradient(closest-side at 20% 25%, rgba(95,57,152,.19), transparent 72%),
-      radial-gradient(closest-side at 79% 34%, rgba(181,56,101,.12), transparent 74%),
-      radial-gradient(closest-side at 50% 90%, rgba(255,116,143,.13), transparent 68%);
-    filter:blur(18px);
-    animation:drift 22s ease-in-out infinite alternate;
-  }
-
-  @keyframes drift{
-    from{transform:translate3d(-1.5%,-.8%,0) scale(1)}
-    to{transform:translate3d(1.8%,1.2%,0) scale(1.05)}
-  }
-
   #scene{
     position:fixed;
     inset:0;
@@ -628,7 +609,6 @@
   }
 
   @media (prefers-reduced-motion:reduce){
-    body::before{animation:none}
     .brand,.top-actions,.day-panel,.right-bottom{animation:none}
   }
 
@@ -751,7 +731,7 @@
 
   const $ = (id) => document.getElementById(id);
   const canvas = $('scene');
-  const ctx = canvas.getContext('2d', { alpha: true });
+  let ctx = canvas.getContext('2d', { alpha: true });
 
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const lerp = (a, b, t) => a + (b - a) * t;
@@ -855,6 +835,7 @@
   let W = 0, H = 0, DPR = 1;
   let branches = [], leaves = [], stars = [], fireflies = [], petals = [], floating = [], sparks = [];
   let shootingStars = [], nextShooting = 5;
+  let backgroundLayer = null, treeLayer = null, shimmerLeaves = [];
   let treeStartedAt = performance.now() - (PREVIEW ? 8000 : 0);
   let lastFrame = performance.now();
   let lastResize = performance.now();
@@ -1118,6 +1099,38 @@
     nextShooting = 4 + Math.random() * 7;
   }
 
+  function withContext(target, draw) {
+    const previous = ctx;
+    ctx = target;
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    try {
+      draw();
+    } finally {
+      ctx = previous;
+    }
+  }
+
+  function buildCaches() {
+    backgroundLayer = document.createElement('canvas');
+    backgroundLayer.width = Math.round(W * DPR);
+    backgroundLayer.height = Math.round(H * DPR);
+    withContext(backgroundLayer.getContext('2d'), () => {
+      drawBackdrop(0);
+      drawGround(0);
+    });
+
+    treeLayer = document.createElement('canvas');
+    treeLayer.width = Math.round(W * DPR);
+    treeLayer.height = Math.round(H * DPR);
+    withContext(treeLayer.getContext('2d'), () => {
+      for (const b of branches) drawBranch(b, 8, 1);
+      drawLeaves(8, 12);
+    });
+
+    shimmerLeaves = leaves.filter((_, i) => i % 57 === 0).slice(0, 34);
+  }
+
   function resize() {
     DPR = Math.min(window.devicePixelRatio || 1, 2);
     W = window.innerWidth;
@@ -1129,6 +1142,7 @@
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     buildTree();
     buildSky();
+    buildCaches();
     lastResize = performance.now();
   }
 
@@ -1138,9 +1152,8 @@
     resizeTimer = setTimeout(resize, 140);
   }, { passive:true });
 
-  resize();
-
   let moonX = 0, moonY = 0;
+  resize();
 
   function drawBackdrop(time) {
     // deep sky wash
@@ -1463,37 +1476,88 @@
     }
   }
 
+  function drawMeteors(time) {
+    if (prefersReduced) return;
+    if (time > nextShooting) {
+      shootingStars.push({
+        x: W * (.17 + Math.random() * .48),
+        y: H * (.04 + Math.random() * .18),
+        vx: 5.5 + Math.random() * 3.2,
+        vy: 2.1 + Math.random() * 1.3,
+        life: 0,
+        max: 1.0 + Math.random() * .5
+      });
+      nextShooting = time + 8 + Math.random() * 9;
+    }
+    for (let i = shootingStars.length - 1; i >= 0; i--) {
+      const s = shootingStars[i];
+      s.life += .016;
+      s.x += s.vx; s.y += s.vy;
+      const k = 1 - s.life / s.max;
+      if (k <= 0) { shootingStars.splice(i, 1); continue; }
+      const grad = ctx.createLinearGradient(s.x, s.y, s.x - s.vx * 15, s.y - s.vy * 15);
+      grad.addColorStop(0, `rgba(255,238,215,${.72 * k})`);
+      grad.addColorStop(1, 'rgba(255,200,210,0)');
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.1;
+      ctx.beginPath();
+      ctx.moveTo(s.x, s.y);
+      ctx.lineTo(s.x - s.vx * 14, s.y - s.vy * 14);
+      ctx.stroke();
+    }
+  }
+
+  function drawShimmers(time) {
+    if (prefersReduced) return;
+    for (const l of shimmerLeaves) {
+      const a = .06 + .23 * (0.5 + 0.5 * Math.sin(time * .85 + l.phase));
+      const x = l.x + Math.sin(time * .6 + l.phase) * 1.1;
+      ctx.save();
+      ctx.globalAlpha = a;
+      ctx.fillStyle = '#fff4df';
+      ctx.beginPath();
+      ctx.arc(x, l.y, 1.6, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+
   function render(now) {
     const dt = Math.min(.038, (now - lastFrame) / 1000);
     lastFrame = now;
     const time = prefersReduced ? 8 : now / 1000;
     const sinceStart = prefersReduced ? 6 : (now - treeStartedAt) / 1000;
+    const useTreeCache = sinceStart > 4.1;
 
     ctx.clearRect(0, 0, W, H);
-    drawBackdrop(time);
-    drawGround(time);
+    if (backgroundLayer) ctx.drawImage(backgroundLayer, 0, 0, W, H);
 
-    // tree reveal, bottom to crown
-    for (const b of branches) {
-      const reveal = clamp((sinceStart - .08 - b.depth * .16) / 1.08, 0, 1);
-      drawBranch(b, time, reveal);
+    if (useTreeCache && treeLayer) {
+      const sway = prefersReduced ? 0 : Math.sin(time * .42) * 1.15;
+      ctx.drawImage(treeLayer, sway, 0, W, H);
+      drawShimmers(time);
+    } else {
+      for (const b of branches) {
+        const reveal = clamp((sinceStart - .08 - b.depth * .16) / 1.08, 0, 1);
+        drawBranch(b, time, reveal);
+      }
+
+      if (sinceStart > 1.8) {
+        const k = clamp((sinceStart - 1.8) / 2.2, 0, 1);
+        const grad = ctx.createRadialGradient(W * .5, H * .45, 10, W * .5, H * .46, Math.min(W, H) * .34);
+        grad.addColorStop(0, `rgba(255,137,167,${.075 * k})`);
+        grad.addColorStop(.5, `rgba(255,113,151,${.035 * k})`);
+        grad.addColorStop(1, 'rgba(255,89,132,0)');
+        ctx.save();
+        ctx.globalCompositeOperation = 'screen';
+        ctx.fillStyle = grad;
+        ctx.fillRect(W * .12, H * .08, W * .76, H * .72);
+        ctx.restore();
+      }
+      drawLeaves(time, sinceStart);
     }
 
-    // canopy glow behind leaves
-    if (sinceStart > 1.8) {
-      const k = clamp((sinceStart - 1.8) / 2.2, 0, 1);
-      const grad = ctx.createRadialGradient(W * .5, H * .45, 10, W * .5, H * .46, Math.min(W, H) * .34);
-      grad.addColorStop(0, `rgba(255,137,167,${.075 * k})`);
-      grad.addColorStop(.5, `rgba(255,113,151,${.035 * k})`);
-      grad.addColorStop(1, 'rgba(255,89,132,0)');
-      ctx.save();
-      ctx.globalCompositeOperation = 'screen';
-      ctx.fillStyle = grad;
-      ctx.fillRect(W * .12, H * .08, W * .76, H * .72);
-      ctx.restore();
-    }
-
-    drawLeaves(time, sinceStart);
+    drawMeteors(time);
     drawPetals(time, dt);
     drawFireflies(time);
     drawFloating(time, dt);
